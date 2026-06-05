@@ -1,0 +1,4 @@
+set of learnings and decisions taken through this project
+
+outliers are only for continuous variables
+only continuous variables needs scaling
