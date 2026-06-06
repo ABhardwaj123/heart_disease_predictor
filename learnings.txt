@@ -2,3 +2,14 @@ set of learnings and decisions taken through this project
 
 outliers are only for continuous variables
 only continuous variables needs scaling
+
+random forest is a collection of random trees
+and each decision tree is a collection of some rows and some columns
+like some attributes and some tuples(each random tree has access to all the attributes)
+
+and then the random forest gives the total output as the opinion of all decision trees
+
+important point is that random forest is the solution for overfitting of data on a single decision tree
+
+roc curve needs probabilities. we pass y_prob becuase if we pass y_pred then 
+we would have only got 0 and 1 with the fixed threshold of 0.5
