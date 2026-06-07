@@ -13,3 +13,11 @@ important point is that random forest is the solution for overfitting of data on
 
 roc curve needs probabilities. we pass y_prob becuase if we pass y_pred then 
 we would have only got 0 and 1 with the fixed threshold of 0.5
+
+scalar stored in model folder is part of pipeline. say if user enters some data , so 
+it has to be normalized using the same that was used during training.
+
+uvicorn is a web server that runs fastApi app. FastAPI defines routes and logic and 
+uvicorn listens to incoming HTTP requests and serves them.
+
+Pydantic -> define shape of data coming through API
