@@ -21,3 +21,7 @@ uvicorn is a web server that runs fastApi app. FastAPI defines routes and logic 
 uvicorn listens to incoming HTTP requests and serves them.
 
 Pydantic -> define shape of data coming through API
+
+CORS : Cross Origin Resource Sharing -> HTML runs in the browser and tries to call fastAPI backend , 
+        request goes from one origin to another. Blocks two different origins by default. It is a 
+        browser side restriction. Prevents malicious websites from making requests to other servers

@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 
+#this schema.py has the shape of data coming through API
 class PatientData(BaseModel):
     age: int      
     sex: int  
