@@ -1,0 +1,19 @@
+#minimal python environment to run the project in the container
+FROM python:3.11-slim
+
+#run all the commands inside the app folder in the container
+WORKDIR /app
+
+#copy requirements seperately
+COPY requirements.txt .
+
+#install all dependencies first
+#--no-cache-dir -> keeps the docker image small
+RUN pip install --no-cache-dir -r requirements.txt
+
+#copies this project into the container
+COPY . .
+
+#commands to run when the container starts
+#"0.0.0.0" -> makes the project accessible outside the container
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

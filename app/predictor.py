@@ -2,9 +2,13 @@ from app.schema import PatientData
 import numpy as np
 import pandas as pd
 import joblib
+import os
 
-loaded_model = joblib.load(r"C:\Users\Rajeev Kumar\Desktop\rano\vs code\heart_disease_predictor\model\rf_model.joblib")
-loaded_scalar = joblib.load(r"C:\Users\Rajeev Kumar\Desktop\rano\vs code\heart_disease_predictor\model\scalar.joblib")
+#__file__ is the path of predictor.py 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+loaded_model = joblib.load(os.path.join(BASE_DIR, "..", "model", "rf_model.joblib"))
+loaded_scalar = joblib.load(os.path.join(BASE_DIR, "..", "model", "scaler.joblib"))
+
 
 #only these continuous columns to be normalized
 numerical_cols = ["age", "trestbps", "chol", "thalach" , "oldpeak"]
