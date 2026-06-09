@@ -38,22 +38,22 @@ A full end-to-end machine learning project that predicts whether a person has he
 
 ## Project Structure
 /app
-    main.py -> defining FastAPI app and endpoints
-    predictor.py -> functionality of /predict endpoint
-    schema.py -> Pydantic model(tells us the shape of data coming through API)
+main.py -> defining FastAPI app and endpoints
+predictor.py -> functionality of /predict endpoint
+schema.py -> Pydantic model(tells us the shape of data coming through API)
 
 /frontend
-    index.html
-    style.css
-    app.js -> fetch call to API and result display
+index.html
+style.css
+app.js -> fetch call to API and result display
 
 /model
-    rf_model.joblib -> trained random forest model
-    scaler.joblib -> Fitted StandardScaler for preprocessing
+rf_model.joblib -> trained random forest model
+scaler.joblib -> Fitted StandardScaler for preprocessing
 
 /notebooks
-    eda_and_training_ipynb
-    heart.csv
+eda_and_training_ipynb
+heart.csv
 
 DockerFile -> specifying requirements for container
 
