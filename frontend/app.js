@@ -17,7 +17,7 @@ async function predict(){
         thal: parseFloat(document.getElementById('thal').value)
     }
 
-    const response = await fetch("http://127.0.0.1:8000/predict", {
+    const response = await fetch("https://heart-disease-predictor-a1n0.onrender.com/predict", {
         method: "POST",
         headers:{
             "Content-Type": "application/json"
