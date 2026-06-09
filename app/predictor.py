@@ -4,10 +4,10 @@ import pandas as pd
 import joblib
 import os
 
-#__file__ is the path of predictor.py 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-loaded_model = joblib.load(os.path.join(BASE_DIR, "..", "model", "rf_model.joblib"))
-loaded_scalar = joblib.load(os.path.join(BASE_DIR, "..", "model", "scaler.joblib"))
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+loaded_model = joblib.load(os.path.join(BASE_DIR, "model", "rf_model.joblib"))
+loaded_scalar = joblib.load(os.path.join(BASE_DIR, "model", "scaler.joblib"))
 
 
 #only these continuous columns to be normalized
